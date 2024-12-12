@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cadetblue;
+    height: 300vh;
+    font-family: 'Sour Gummy';
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    background-color: blueviolet;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    font-family: 'Edu AU VIC WA NT Pre';
+    font-size: 2rem;
+}
+
+nav img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+  
+img:hover {
+      opacity: 1;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100vw;
+    height: 90vh;
+    background: linear-gradient(90deg, #3700c2 0%, #8e2de2 );
+    color: white;  
+}
+
+h1 {
+    font-size: 6.5rem;
+}
+  
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    color: white;
+    font-size: 3rem;
+}
+
+.icon {
+    margin-top: 3rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.card {
+    width: 50%;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 15px;
+    margin: 5rem;
+}
+
+.cards {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding:0 1em;
+    overflow: hidden;
+}
+  
+.slide {
+    position: relative;
+    padding-left: 0;
+    margin: 0;
+    height: 500px;
+    overflow: hidden;
+    font-family: 'Host Grotesk';
+  }
+
+.caption {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    font-size: 5rem;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+    background: rgba(0, 0, 0, 0.348);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5rem;
+    border-radius: 0 2rem 2rem 0;
+  } 
+
+.div {
+    width: 100%;
+  }
+  
+.img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    animation: carousel 10s linear infinite;
+    transform: translateX(100%);
+  }
+  
+.slide {
+    animation-name: first-picture, carousel;
+    animation-duration: 10s;
+    animation-iteration-count: 1, infinite;
+    animation-delay: 0s, 10s;
+    transform: translateX(0%);
+  }
+  
+  @keyframes first-picture {
+    0% { transform: translateX(0%); }
+    7.5%, 33% { transform: translateX(0); }
+    40.5%, 100% { transform: translateX(-100%); }
+  }
+  
+  @keyframes carousel {
+    0% { transform: translateX(100%); }
+    7.5%, 33% { transform: translateX(0); }
+    40.5%, 100% { transform: translateX(-100%); }
+  }
+  
+div#sliderA { 
+  overflow: hidden; 
+}
+
+div#sliderA figure img {
+   width: 20%; float: left; 
+}
+
+div#sliderA figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 10s slidy infinite; 
+}
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: 0%; }
+}
+  
+
+.contact {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Host Grotesk';
+}
+
+footer {
+    color: white;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.social-icons img {
+    height: 50px;
+    width: 50 px;
+  }
+  
+.formulaire {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    width: 400px;
+    padding: 3rem;
+    margin-top: 2rem;
+}
+
+.formulaire label {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    font-size: 2rem;;
+}
+
+.formulaire input {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.formulaire button:hover {
+    background-color: rgb(102, 99, 99);
+}
+
+.formulaire button {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
